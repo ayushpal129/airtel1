@@ -1,0 +1,170 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    color: grey;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.airtel  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: double;
+}
+
+.head {
+    color: red;
+
+    margin-right: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.airpng {
+    margin-top: 20px;
+    width: 120px;
+    margin-left: 80px;
+}
+
+.m  {
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(255, 60, 60);
+}
+
+.mainn {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(234, 234, 234);
+    margin-top: 50px;
+    border-style: double;
+    border-width: 1px;
+    border-color: rgb(255, 71, 71);
+    font-weight: 300;
+    font-size: 60px;
+    color: grey;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.txt  {
+    color:red; 
+    margin-top:10px; 
+    margin-bottom:5px; 
+    margin-left: 150px;
+}
+
+.wallet {
+    width: 100px;
+    margin-left: 1200px
+}
+
+.payment {
+    margin-left: 50px;
+    color: rgb(91, 91, 91);
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 550;
+}
+
+.c {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid #a9a9a9;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+
+.d {
+    margin-top: 10px;
+    border-style: double;
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.container {
+    position:relative;
+    left: 37%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #d0021b; /* Airtel red */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #d0021b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #b30018;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}

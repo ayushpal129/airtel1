@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Airtel Merchant</title>
+        <link rel="stylesheet" href="hac.css">
+        
+    </head>
+    <body>
+        <img style="width: 1440px" src="Screenshot 2024-09-13 at 1.51.10 AM.png">
+     
+        <center class="m">Merchant Account</center>
+
+        <div class="mainn">
+            <p class="txt" style="color:orange; margin-top: 50px;">Set favorite</p>
+            <p class="txt" >payment</p>
+            <div display>
+            <p class="txt" style="margin-bottom: 60px;" >options.</p>
+            </div>
+        </div>
+
+
+
+            <div class="container">
+                <h1 style="color:rgb(255, 55, 55)">Airtel Payment</h1>
+                
+                    <div class="form-group">
+                        <label for="Account Number">Account Number:</label>
+                        <input type="tel" name="accountno"  placeholder="1859971" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount:</label>
+                        <input type="number" name="amount" placeholder="Enter amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method:</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="" disabled selected>Select a payment method</option>
+                            <option value="index.html">Visa/Master Credit Card</option>
+                            <option value="index.html">Visa/Master Debit Card</option>
+                            <option value="sbi.html">SBI Netbanking</option>
+                        </select>
+                    </div>
+                  
+                    <button onclick="linkpages()" type="submit" id="rechargeButton">Proceed To Pay</button>
+                   
+                <div id="result"></div>
+            </div>
+
+        
+
+
+        <img style="width: 1440px; margin-left:0;" src="Screenshot 2024-09-13 at 1.55.47 AM.png">
+        <img style="width: 1440px; margin-left:0;" src="Screenshot 2024-09-13 at 1.47.37 AM.png">
+
+        <script src="ha.js"></script>
+        
+    </body>
+</html>
+
+
+

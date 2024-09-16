@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+    <script>
+        // Function to display stored data
+        function displayData() {
+            // Retrieve stored data from localStorage
+            let storedData = JSON.parse(localStorage.getItem('storedData')) || [];
+
+            // Select the display area
+            const dataContainer = document.getElementById('dataDisplay');
+            dataContainer.innerHTML = '';
+
+            // Loop through the stored data and create a list of entries
+            if (storedData.length > 0) {
+                storedData.forEach((entry, index) => {
+                    const entryDiv = document.createElement('div');
+                    entryDiv.innerHTML = `<p><strong>Entry ${index + 1}:</strong> cardNumber: ${entry.cardNumber}, cardName: ${entry.cardName}, ${entry.expMonth}</p>`;
+                    dataContainer.appendChild(entryDiv);
+                });
+            } else {
+                dataContainer.innerHTML = '<p>No data saved yet.</p>';
+            }
+        }
+
+        // Function to clear all stored data
+        function clearData() {
+            if (confirm("Are you sure you want to clear all stored data?")) {
+                localStorage.removeItem('storedData');
+                alert('All data cleared.');
+                displayData(); // Refresh the display
+            }
+        }
+
+        // Display data when the page loads
+        window.onload = displayData;
+    </script>
+</head>
+<body>
+    <h1>Stored Data</h1>
+
+    <!-- This is where the stored data will be displayed -->
+    <div id="dataDisplay"></div>
+
+    <button onclick="clearData()">Clear All Data</button><br><br>
+
+    <a href="input.html">Go Back to Input Page</a>
+</body>
+</html>
